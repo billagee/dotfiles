@@ -9,6 +9,11 @@ call pathogen#infect()
 syntax on
 
 filetype plugin indent on
+" Settings for unrecognized files; language-specific tab/indent settings files
+" live in .vim/after/ftplugin/
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 syntax enable
 
@@ -16,11 +21,6 @@ syntax enable
 let g:solarized_termtrans = 1
 set background=dark
 colorscheme solarized
-
-"Spaces, not tabs
-set tabstop=4
-set shiftwidth=4
-set expandtab
 
 "Take care of indents for Java.
 set autoindent
