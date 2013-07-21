@@ -1,5 +1,9 @@
 set ruler
+set laststatus=2 " Always show status line
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] " custom status line
+" Always highlight current row and column:
 set cursorline
+set cursorcolumn
 "set number
 call pathogen#infect()
 syntax on
