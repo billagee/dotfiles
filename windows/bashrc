@@ -1,0 +1,7 @@
+# .bashrc for Git bash on Windows
+
+alias ll='ls -la'
+
+# Use system vim instead of /bin/vim provided by Git bash
+alias vim="/c/Program\ Files\ \(x86\)/Vim/Vim74/Vim.exe"
+
