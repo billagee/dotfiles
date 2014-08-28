@@ -59,3 +59,7 @@ set list listchars=tab:>-,trail:.,extends:>
 ":set list listchars=tab:>-,eol:¶
 " The command :dig displays other digraphs you can use.
 
+" Disable smartindent for Python since it causes new lines starting with # to
+" have their indentation stripped.
+au! FileType python setl nosmartindent
+
