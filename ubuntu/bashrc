@@ -108,7 +108,7 @@ alias glp="git log -p"
 alias gb="git branch"
 alias greb="git pull --rebase"
 
-alias dxprod="source ~/prodbuilds/dx-toolkit/environment && echo Using dx at \'$(which dx)\'"
+alias dxprod="source ~/prodbuilds/dx-toolkit/environment"
 alias tml="tmux list-sessions"
 alias rprog="rsync -avz --progress"
 
