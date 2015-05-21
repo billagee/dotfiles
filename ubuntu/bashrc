@@ -94,11 +94,22 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-#alias m='mutt -f {my.imap.hostname}inbox'
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+#alias m='mutt -f {my.imap.hostname}inbox'
+alias gs="git status"
+alias gsi="git status --ignored"
+alias gd="git diff"
+alias gl="git log"
+alias glp="git log -p"
+alias gb="git branch"
+alias greb="git pull --rebase"
+
+alias dxprod="source ~/prodbuilds/dx-toolkit/environment && echo Using dx at \'$(which dx)\'"
+alias tml="tmux list-sessions"
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
