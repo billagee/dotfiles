@@ -101,6 +101,7 @@ fi
 
 #alias m='mutt -f {my.imap.hostname}inbox'
 alias gs="git status"
+alias gsl="git status | less"
 alias gsi="git status --ignored"
 alias gd="git diff"
 alias gl="git log"
@@ -108,8 +109,12 @@ alias glp="git log -p"
 alias gb="git branch"
 alias greb="git pull --rebase"
 
+# dx-toolkit aliases
 alias dxprod="source ~/prodbuilds/dx-toolkit/environment"
+
+# tmux aliases
 alias tml="tmux list-sessions"
+alias tmw="tmux list-windows"
 alias rprog="rsync -avz --progress"
 
 # enable programmable completion features (you don't need to enable
@@ -118,6 +123,12 @@ alias rprog="rsync -avz --progress"
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+# Phabricator/arcanist
+export PATH=$HOME/arcanist/arcanist/bin:$PATH
+
+# Disable ctrl-s toggle in terminals to avoid interfering with fwd incr search:
+stty -ixon
 
 # Things not defined in the skel .bashrc
 export GIT_EDITOR=vim
