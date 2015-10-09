@@ -20,6 +20,7 @@ syntax enable
 " Solarized stuff
 let g:solarized_termtrans = 1
 set background=dark
+"set background=light
 colorscheme solarized
 
 "Take care of indents for Java.
@@ -62,4 +63,7 @@ set list listchars=tab:>-,trail:.,extends:>
 " Disable smartindent for Python since it causes new lines starting with # to
 " have their indentation stripped.
 au! FileType python setl nosmartindent
+
+" For ._js streamline files, use JS filetype
+au BufNewFile,BufRead *._js set filetype=javascript
 
