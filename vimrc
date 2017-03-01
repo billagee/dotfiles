@@ -1,3 +1,25 @@
+set nocompatible              " required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'Valloric/YouCompleteMe'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" Begin non-Vundle config
 set ruler
 set laststatus=2 " Always show status line
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] " custom status line
@@ -5,11 +27,12 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02
 "set cursorline
 "set cursorcolumn
 "set number
-call pathogen#infect()
+
+"call pathogen#infect()
 "call pathogen#runtime_append_all_bundles()
 syntax on
 
-filetype plugin indent on
+"filetype plugin indent on
 " Settings for unrecognized files; language-specific tab/indent settings files
 " live in .vim/after/ftplugin/
 set tabstop=4
@@ -69,10 +92,16 @@ au! FileType python setl nosmartindent
 nnoremap <buffer> <F9> :exec '!python3.5' shellescape(@%, 1)<cr>
 
 let g:used_javascript_libs = 'underscore,backbone'
-" For ._js streamline files, use JS filetype
 au BufNewFile,BufRead *._js set filetype=javascript
 au BufNewFile,BufRead *.json set filetype=javascript
 
-
-execute pathogen#infect()
-call pathogen#helptags()
+"python with virtualenv support
+"This is needed for YouCompleteMe to find your virtualenv:
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
