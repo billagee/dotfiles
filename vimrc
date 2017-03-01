@@ -2,10 +2,11 @@ set ruler
 set laststatus=2 " Always show status line
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] " custom status line
 " Always highlight current row and column:
-set cursorline
-set cursorcolumn
+"set cursorline
+"set cursorcolumn
 "set number
 call pathogen#infect()
+"call pathogen#runtime_append_all_bundles()
 syntax on
 
 filetype plugin indent on
@@ -19,8 +20,8 @@ syntax enable
 
 " Solarized stuff
 let g:solarized_termtrans = 1
-set background=dark
-"set background=light
+"set background=dark
+set background=light
 colorscheme solarized
 
 "Take care of indents for Java.
@@ -64,6 +65,14 @@ set list listchars=tab:>-,trail:.,extends:>
 " have their indentation stripped.
 au! FileType python setl nosmartindent
 
+" F9 passes current buffer to python3.5
+nnoremap <buffer> <F9> :exec '!python3.5' shellescape(@%, 1)<cr>
+
+let g:used_javascript_libs = 'underscore,backbone'
 " For ._js streamline files, use JS filetype
 au BufNewFile,BufRead *._js set filetype=javascript
+au BufNewFile,BufRead *.json set filetype=javascript
 
+
+execute pathogen#infect()
+call pathogen#helptags()
