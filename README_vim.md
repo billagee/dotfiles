@@ -11,8 +11,14 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Restart vim and use the command :PluginInstall
 
-~/.vim/bundle/YouCompleteMe
-./install.py --clang-completer
+(cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer)
+
+# Tell git that you want to use the new custom-built vim as your editor;
+# without this, 'git commit' may display the error
+# "Symbol not found: __PyCodecInfo_GetIncrementalDecoder"
+# See https://github.com/Valloric/YouCompleteMe/issues/549
+
+git config --global core.editor `which vim`
 
 # Delete tags file from ctags if you have one in your project
 
