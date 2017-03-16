@@ -80,6 +80,8 @@ If you want to make shorter mappings of the GoTo commmands, that can be done in 
 
 This example allows you to type ```\jd``` to jump, assuming your leader key is the default ```\```:
 
+```
 " Map \jd to :YcmCompleter GoTo
 " Note that if you don't want to use leader key '\' that too can be remapped:
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
+```
