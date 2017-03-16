@@ -67,3 +67,19 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer
 ```
+
+* For commands that let you jump to definitions/declarations, see:
+
+https://github.com/Valloric/YouCompleteMe#goto-commands
+
+To use them, put the cursor on the item you want to complete, and use a command, e.g.:
+
+    :YcmCompleter GoTo
+
+If you want to make shorter mappings of the GoTo commmands, that can be done in your .vimrc.
+
+This example allows you to type ```\jd``` to jump, assuming your leader key is the default ```\```:
+
+" Map \jd to :YcmCompleter GoTo
+" Note that if you don't want to use leader key '\' that too can be remapped:
+nnoremap <leader>jd :YcmCompleter GoTo<CR>

@@ -105,3 +105,7 @@ if 'VIRTUAL_ENV' in os.environ:
   activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
   execfile(activate_this, dict(__file__=activate_this))
 EOF
+
+" Map \jd to :YcmCompleter GoTo
+" Note that if you don't want to use leader key '\' that too can be remapped:
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
