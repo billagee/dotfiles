@@ -3,6 +3,10 @@ tl;dr:
 ```
 sudo port install vim +python27 +python35
 
+# Or with homebrew:
+
+brew install vim # python27 support should be compiled in by default
+
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Added vundle config into .vimrc, most importantly:
