@@ -48,7 +48,7 @@ vim has the variants:
      * conflicts with python26
 ...
    python35: Enable Python scripting
-     * conflicts with python33 python34 python36udo port install vim +python27 +python35
+     * conflicts with python33 python34 python36
 ```
 
 * Installing Vundle:
