@@ -1,27 +1,3 @@
-# Cli Colors
-export CLICOLOR=1
-# use yellow for dir?~@~Ys
-export LSCOLORS=dxfxcxdxbxegedabagacad
-
-# history
-export HISTSIZE=5000
-
-export SVN_EDITOR=vim
-
-alias ll="ls -la"
-#alias m='mutt -f {my.imap.hostname}inbox'
-alias gs="git status"
-alias gsi="git status --ignored"
-alias gd="git diff"
-alias gl="git log"
-alias glp="git log -p"
-alias gb="git branch"
-alias greb="git pull --rebase"
-
-alias dxprod="source ~/prodbuilds/dx-toolkit/environment"
-alias tml="tmux list-sessions"
-alias rprog="rsync -avz --progress"
-
-#PATH=$PATH:/usr/local/mysql/bin:/usr/local/sbin
-#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
+# .bashrc isn't too useful on macOS, so don't bother.
+# Almost all new shells will simply load .bash_profile and be done with it,
+# so, place all customizations there.

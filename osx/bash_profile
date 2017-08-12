@@ -1,11 +1,31 @@
-# Tell ls to be colorful.
+# cli colors
 export CLICOLOR=1
+
+# use yellow for dir?~@~Ys
+export LSCOLORS=dxfxcxdxbxegedabagacad
 
 # Tell grep to highlight matches
 export GREP_OPTIONS='--color=auto'
 
-# Load .bashrc
-[ -r ~/.bashrc ] && source ~/.bashrc
+# history
+export HISTSIZE=5000
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export SVN_EDITOR=vim
 
+alias ll="ls -la"
+#alias m='mutt -f {my.imap.hostname}inbox'
+alias gs="git status"
+alias gsi="git status --ignored"
+alias gd="git diff"
+alias gl="git log"
+alias glp="git log -p"
+alias gb="git branch"
+alias greb="git pull --rebase"
+
+alias dxprod="source ~/prodbuilds/dx-toolkit/environment"
+alias tml="tmux list-sessions"
+alias rprog="rsync -avz --progress"
+
+# Adding homebrew node and python paths:
+export PATH="/usr/local/opt/node@6/bin:$PATH"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
