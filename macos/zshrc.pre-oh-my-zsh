@@ -1,0 +1,38 @@
+# zshrc config from before oh-my-zsh install
+
+# cli colors
+export CLICOLOR=1
+
+# use yellow for dir?~@~Ys
+export LSCOLORS=dxfxcxdxbxegedabagacad
+
+# Tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
+
+#export SVN_EDITOR=vim
+
+alias dockerclean="docker system prune --volumes && docker image prune --all"
+alias fn="find . -name"
+alias ll="ls -la"
+alias lad="ls -lad"
+#alias m='mutt -f {my.imap.hostname}inbox'
+alias gs="git status"
+alias gsi="git status --ignored"
+alias gsl="git status | less"
+alias gd="git diff"
+alias gl="git log"
+alias glp="git log -p"
+alias gb="git branch"
+alias greb="git pull --rebase"
+alias gpom="git push origin master"
+alias gpo="git push origin"
+alias gsu="git submodule update"
+alias gcm="git checkout master"
+
+alias tml="tmux list-sessions"
+alias rprog="rsync -avz --progress"
+
+alias kg='kubectl get'
+alias kgp='kubectl get pods'
+alias kgd='kubectl get deployments'
+alias kgs='kubectl get services'
